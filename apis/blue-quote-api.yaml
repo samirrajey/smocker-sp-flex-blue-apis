@@ -1,0 +1,72 @@
+---
+- request:
+    method: POST
+    path:
+      matcher: ShouldMatch
+      value: /orders/2.0/quote
+  response:
+    status: 200
+    headers:
+      Content-Type: application/json
+    body: |
+      {
+        "locationNumber": "03548",
+        "venueId": "00070:F001",
+        "origin": {
+          "id": "string",
+          "system": "Mobile",
+          "org": "string",
+          "user": "string",
+          "thirdPartyPartner": "DoorDash",
+          "digitalChannelId": 0,
+          "cashierId": 0
+        },
+        "specialInstructions": "Extra crispy fries please!",
+        "fulfillment": {
+          "destination": "FoodTruck",
+          "address": {
+            "addressLine1": "77 12TH ST NE",
+            "addressLine2": "Unit 1089",
+            "city": "Atlanta",
+            "state": "GA",
+            "zip": 30309,
+            "zipExtension": 3972,
+            "country": "US",
+            "county": "Fulton"
+          },
+          "vehicleColor": "Black",
+          "vehicleMake": "Toyota",
+          "vehicleType": "RAV4",
+          "guestCount": 4,
+          "processingTerminalId": 123
+        },
+        "processLoyalty": false,
+        "editedMobileOrder": false,
+        "price": {
+          "comp": 0,
+          "taxRate": 0,
+          "tax": 47,
+          "subTotal": 529,
+          "retail": 0,
+          "deliveryFee": 0,
+          "tip": 0
+        },
+        "user": {
+          "id": "CFAID-1234512",
+          "loyaltyId": "89001116783650",
+          "firstName": "Richard",
+          "lastName": "Taylor",
+          "phoneNumber": "555-555-5555"
+        },
+        "taxCalcMethod": "LOCAL",
+        "items": [
+          {
+            "tag": "CFA_SANDWICH_MEAL",
+            "quantity": 1,
+            "specialInstructions": "Make it crispy!",
+            "comboItems": [],
+            "modifiers": [],
+            "name": "Chick-fil-A<sup>®</sup> Sandwich Meal"
+          }
+        ]
+      }
